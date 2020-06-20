@@ -1,0 +1,19 @@
+{
+  "admin":{
+    "email":"thuongntk2017@gmail.com",
+    "password":"Thuong@123",
+    "firstName":"Admin",
+    "lastName":"Test"
+  },
+  "user1":{
+    "firstName":"User 1",
+    "lastName":"Test",
+    "email":"user1@gmail.com"
+    
+  },
+  "user2":{
+    "firstName":"User 2",
+    "lastName":"Test",
+    "email":"user2@gmail.com"
+  }
+}
