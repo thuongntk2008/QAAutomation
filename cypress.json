@@ -2,6 +2,7 @@
   "testFiles": "**/*.feature",
   "env": {
     "url": "https://staging.tinyserver.info/"
-  }
+  },
+  "defaultCommandTimeout":10000
 
 }

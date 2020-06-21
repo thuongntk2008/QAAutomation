@@ -13,7 +13,7 @@ Given(/^I login to tinypulse system successfully$/, () => {
     cy.get('#session_email').type(this.data.admin.email)
     cy.get('#session_password').type(this.data.admin.password)
     cy.get('.gtm-sign-in').click()
-    cy.wait(7000)
+    
   })
 });
 
@@ -21,7 +21,7 @@ Given(/^I login to tinypulse system successfully$/, () => {
 Given(/^I go to User Settings page$/, () => {
   // Load user credentials from json
   cy.get(".icon-people-setting").click()
-  cy.wait(5000)
+  
   cy.get('.onboarding-people-banner').should('be.visible')
  });
 
@@ -29,7 +29,7 @@ Given(/^I go to User Settings page$/, () => {
 When(/^I create new users$/, () => {
   // Click Add People button
   cy.get('a[href*="invite"]').click()
-  cy.wait(5000)
+  
   cy.fixture('user.json').then(function(data){
     this.data = data    
     cy.task('datenow').then((random) => {
@@ -48,7 +48,7 @@ When(/^I create new users$/, () => {
       cy.get('input[field="email"][refkey="2"]').type(randomString + this.data.user2.email)  
     })
     cy.get('.cucumber-send-invite-button').click()
-    cy.wait(3000)
+    
   })
 });
 
@@ -56,7 +56,7 @@ When(/^I create new users$/, () => {
 When(/^I create existing user$/, () => {
   // Click Add People button
   cy.get('a[href*="invite"]').click()
-  cy.wait(5000)
+  
 
   // Add existing user
   cy.fixture('user.json').then(function(data){
@@ -65,7 +65,7 @@ When(/^I create existing user$/, () => {
     cy.get('input[field="lastName"][refkey="1"]').type(this.data.admin.lastName)
     cy.get('input[field="email"][refkey="1"]').type(this.data.admin.email)
     cy.get('.cucumber-send-invite-button').click()
-    cy.wait(3000)
+    
   })
 });
 
